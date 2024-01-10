@@ -5,10 +5,41 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
-  
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="reset.css">
   <title>Frontend Mentor | Dictionary web app</title>
 </head>
 <body>
+  <main>
+    <header>
+    <img src="assets/images/logo.svg">
+    <select name="font-styles" id="font-styles">
+      <option value="sans-serif">Sans Serif</option>
+      <option value="serif">Serif</option>
+      <option value="monospace">Monospace</option>
+    </select>
 
+    <label class="switch">
+      <input type="checkbox">
+      <span class="slider round"></span>
+    </label>
+
+    <img src="assets/images/icon-moon.svg">
+    </header>
+
+    <section id="search-bar">
+      <input type="text" id="wordsearch" name="wordsearch"><img src="assets/images/icon-search.svg">
+      <input type="submit" value="Submit">
+    </section>
+
+    <section id="word-definition">
+      <section id="word-result">
+      <h1 id="word-search-result">Test</h1>
+      <img src="assets/images/icon-play.svg">
+      </section>
+    </section>
+  </main>
+
+  <script src="scripts.js"></script>
 </body>
 </html>
