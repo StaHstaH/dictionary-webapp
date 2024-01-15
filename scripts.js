@@ -16,6 +16,13 @@ const searchWord = async (word) => {
 };
 
 function displayWord(json) {
+  let errorSection = document.querySelector("#error");
+  if(json.title) {
+    let title = document.querySelector("#error h3");
+    title.innerHTML = json.title;
+    errorSection.classList.remove("hide_error");
+    return;
+  } errorSection.classList.add("hide_error");
   let result = document.getElementById("word-search-result");
 
   result.innerHTML = json[0].word;

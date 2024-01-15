@@ -1,5 +1,39 @@
-header, #word-result {
-  display:flex;
+:root {
+  font-size: 14px;
+  --black: hsl(0,0%,2%);
+  --ligtherblack: hsl(0, 0%, 12%);
+  --blackgrey: hsl(0, 0%, 18%);
+  --darkgrey: hsl(0, 0%, 23%);
+  --grey: hsl(0, 0%, 51%);
+  --greywhite: hsl(0, 0%, 91%);
+  --whitegrey: hsl(0, 0%, 96%);
+  --white: hsl(0, 0%, 100%);
+  --violet: hsl(274, 82%, 60%);
+  --redorange: hsl(0, 100%, 66%);
+}
+
+main {
+   display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 4rem;
+}
+
+header,
+#word-result {
+  display: flex;
+}
+
+header {
+  width: 50%;
+  justify-content: space-between;
+}
+
+#header-switchers {
+  display: flex;
+  flex-direction: row;
+  gap: 2rem;
 }
 
 #word-definition h1 {
@@ -64,4 +98,18 @@ input:checked+.slider:before {
 
 .slider.round:before {
   border-radius: 50%;
+}
+
+#error {
+
+}
+
+.hide_error {
+  display:none;
+}
+
+#search-bar {
+  display: flex;
+  flex-direction: row;
+  padding: 3rem 5rem;
 }
