@@ -150,7 +150,7 @@ input:checked+.slider:before {
 
 }
 
-.hide_error {
+.hide {
   display:none;
 }
 

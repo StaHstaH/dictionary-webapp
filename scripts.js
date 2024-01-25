@@ -20,9 +20,9 @@ function displayWord(json) {
   if(json.title) {
     let title = document.querySelector("#error h3");
     title.innerHTML = json.title;
-    errorSection.classList.remove("hide_error");
+    errorSection.classList.remove("hide");
     return;
-  } errorSection.classList.add("hide_error");
+  } errorSection.classList.add("hide");
   let result = document.getElementById("word-search-result");
 
   result.innerHTML = json[0].word;
