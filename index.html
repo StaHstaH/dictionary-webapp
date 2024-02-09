@@ -3,7 +3,10 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@200..900&family=Inter:wght@400;700;800&family=Lora:ital,wght@0,400..700;1,400..700&display=swap"
+    rel="stylesheet">
   <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
   <link rel="stylesheet" href="styles.css" />
   <link rel="stylesheet" href="reset.css">
@@ -32,8 +35,8 @@
     </header>
 
     <section id="search-bar">
-      <input type="text" id="wordsearch" name="wordsearch"><img src="assets/images/icon-search.svg">
-      <input type="submit" value="Submit">
+      <input type="text" id="wordsearch" name="wordsearch"><img src="assets/images/icon-search.svg"></input>
+      <!-- <input type="submit" value="Submit"> -->
     </section>
 
     <section id="word-definition">
@@ -48,14 +51,17 @@
         <p></p>
       </section>
 
-      <section id="meaning" class="hide">
-        <h2 class="speach-parts">🫤</h2>
+      <section id="meanings">
+
+      </section>
+
+      <section id="meaning-template" class="hide">
+        <h2 id="speech-parts"></h2>
         <h3></h3>
         <p></p>
       </section>
 
       </section>
-    </section>
   </main>
 
   <script src="scripts.js"></script>

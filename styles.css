@@ -155,7 +155,28 @@ input:checked+.slider:before {
 }
 
 #search-bar {
+  position: relative;
   display: flex;
   flex-direction: row;
   padding: 3rem 5rem;
+}
+
+#wordsearch {
+  border: none;
+  border-radius: 0.5rem;
+  min-width: 53rem;
+  min-height: 4.5rem;
+  background-color: var(--whitegrey);
+  padding: 0.5rem 1.5rem;
+  margin: 0.2rem 2rem;
+  font-family: 'Inter', sans-serif;
+  font-weight: 700;
+  font-size: 1.4rem;
+}
+
+#search-bar img {
+  position: absolute;
+  top: 5rem;
+  right:8.5rem;
+  max-height: 20%;
 }
