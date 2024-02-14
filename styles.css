@@ -26,7 +26,7 @@ header,
 }
 
 header {
-  width: 50%;
+  width: 70%;
   justify-content: space-between;
 }
 
@@ -40,6 +40,12 @@ header {
 
 #word-definition h1 {
   font-size: 4rem;
+}
+
+#word-definition h4 {
+  color: var(--grey);
+  font-size: 1.4rem;
+  font-weight: 400;
 }
 
 #font-styles {
@@ -180,3 +186,23 @@ input:checked+.slider:before {
   right:8.5rem;
   max-height: 20%;
 }
+
+#word-result {
+  display: flex;
+  align-content: space-between;
+}
+
+#word-definition {
+  max-width: 70%;
+}
+
+#definition-template {
+  font-size: 1.3rem;
+  color: var(--blackgrey);
+}
+
+#definition-template::marker {
+  color: var(--violet);
+}
+
+
