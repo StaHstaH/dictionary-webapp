@@ -38,6 +38,10 @@ header {
   gap: 2rem;
 }
 
+#wordsearch::placeholder {
+  color:var(--blackgrey);
+}
+
 #word-definition h1 {
   font-size: 4rem;
 }
@@ -46,6 +50,7 @@ header {
   color: var(--grey);
   font-size: 1.4rem;
   font-weight: 400;
+  margin: 2rem 1rem;
 }
 
 #font-styles {
@@ -165,6 +170,7 @@ input:checked+.slider:before {
   display: flex;
   flex-direction: row;
   padding: 3rem 5rem;
+  max-width: 100%;
 }
 
 #wordsearch {
@@ -187,9 +193,13 @@ input:checked+.slider:before {
   max-height: 20%;
 }
 
+#word-search-result {
+  font-family: 'Inter', sans-serif;
+}
+
 #word-result {
   display: flex;
-  align-content: space-between;
+  justify-content: space-between;
 }
 
 #word-definition {
@@ -205,4 +215,16 @@ input:checked+.slider:before {
   color: var(--violet);
 }
 
+
+.definition-text {
+  font-family: 'Inter', sans-serif;
+  font-size: 1.3rem;
+  margin-bottom: 1rem;
+}
+
+.synonyms, .antonyms {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
 

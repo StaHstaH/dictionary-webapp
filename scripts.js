@@ -18,7 +18,7 @@ const searchWord = async (word) => {
 
 function displayWord(json) {
   let errorSection = document.querySelector("#error");
-  let partOfSpeech = document.querySelector("#speech-parts");
+  // let partOfSpeech = document.querySelector("#speech-parts");
   if(json.title) {
     let title = document.querySelector("#error h3");
     title.innerHTML = json.title;
