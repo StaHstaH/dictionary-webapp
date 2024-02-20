@@ -1,8 +1,14 @@
 const input = document.getElementById('wordsearch');
+const playback = document.querySelector('#word-definition img');
 
-input.addEventListener("keyup", (event) => {
+input.addEventListener("keyup", () => {
   console.log(input.value + "dupa");
   searchWord(input.value);
+});
+
+playback.addEventListener("click", (t) => {
+  let phoneticPlayback = document.getElementById("pronunciation");
+  phoneticPlayback.play();
 });
 
 
@@ -18,7 +24,7 @@ const searchWord = async (word) => {
 
 function displayWord(json) {
   let errorSection = document.querySelector("#error");
-  // let partOfSpeech = document.querySelector("#speech-parts");
+
   if(json.title) {
     let title = document.querySelector("#error h3");
     title.innerHTML = json.title;
@@ -26,15 +32,18 @@ function displayWord(json) {
     return;
   } errorSection.classList.add("hide");
 
+  let phonetic = findPhonetics(json[0]);
+  let phoneticDisplay = document.querySelector('#word-result h3');
+  let phoneticPlayback = document.getElementById('pronunciation');
+
+  phoneticPlayback.src = phonetic.audio;
+
+  phoneticDisplay.innerHTML = phonetic.text;
+
   let meanings = document.getElementById('meanings');
   meanings.replaceChildren();
   
-  // let meaning = document.querySelector("#meaning");
-  // meaning.classList.remove("hide");
-  // partOfSpeech.innerHTML = json[0].meanings[0].partOfSpeech;
-//  displayMeaning(json[0].meanings[0]);
-
-  
+ 
   for (const meaning of json[0].meanings) {
     displayMeaning(meaning);
   }
@@ -75,15 +84,25 @@ function handleSynonymsAntonyms(wordList, domElement, className) {
 
     for (const synonym of wordList) {
       let synonymLink = document.createElement("a");
+      let space = document.createTextNode('\xa0\xa0\xa0 ');
       synonymLink.innerHTML = synonym;
+      synonymLink.addEventListener('click' , () => {
+        searchWord(synonym);
+        window.scrollTo({
+          top: 0,
+          left: 0,
+          behavior: 'smooth',
+        });
+        input.value = synonym;
+      })
       synonymList.appendChild(synonymLink);
+      synonymList.appendChild(space);
     }
   } else {
     let synonymSection = domElement.querySelector(className);
     synonymSection.remove();
   }
 }
-
 
 function displayDefinition(definition, template, parentNode) {
   let domElement = template.cloneNode(true);
@@ -98,4 +117,16 @@ let exampleText = domElement.querySelector("p.example");
   }
 
   parentNode.appendChild(domElement);
+}
+
+function findPhonetics (json) {
+  for (const phonemes of json.phonetics) {
+    if(phonemes.audio) {
+      return {
+        text: phonemes.text,
+        audio: phonemes.audio
+      };
+    } 
+  }
+  return json.phonetic;
 }

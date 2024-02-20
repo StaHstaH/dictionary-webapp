@@ -30,6 +30,15 @@ header {
   justify-content: space-between;
 }
 
+h1 {
+  font-size: 4rem;
+}
+
+h4 {
+  font-size: 1.4rem;
+  font-family: 'Inter', sans-serif;
+}
+
 #header-switchers {
   display: flex;
   flex-direction: row;
@@ -42,9 +51,6 @@ header {
   color:var(--blackgrey);
 }
 
-#word-definition h1 {
-  font-size: 4rem;
-}
 
 #word-definition h4 {
   color: var(--grey);
@@ -228,3 +234,24 @@ input:checked+.slider:before {
   align-items: center;
 }
 
+.synonyms a, .synonyms h4 {
+  font-family: 'Inter', sans-serif;
+  font-size: 1.4rem;
+}
+
+.synonyms a {
+  cursor: pointer;
+  color: var(--violet);
+  font-weight: 700;
+}
+
+.synonyms a:hover {
+  text-decoration: underline;
+}
+
+#result h3 {
+  font-family: 'Inter', 'sans-serif';
+  font-size: 1.7rem;
+  color: var(--violet);
+  font-weight: 400;
+}
