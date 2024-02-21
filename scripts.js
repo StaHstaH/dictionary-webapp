@@ -6,7 +6,7 @@ input.addEventListener("keyup", () => {
   searchWord(input.value);
 });
 
-playback.addEventListener("click", (t) => {
+playback.addEventListener("click", () => {
   let phoneticPlayback = document.getElementById("pronunciation");
   phoneticPlayback.play();
 });
