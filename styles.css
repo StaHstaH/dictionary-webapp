@@ -208,6 +208,11 @@ input:checked+.slider:before {
   justify-content: space-between;
 }
 
+#word-result img:hover {
+  cursor: pointer;
+  filter: hue-rotate(100deg);
+}
+
 #word-definition {
   max-width: 70%;
 }
