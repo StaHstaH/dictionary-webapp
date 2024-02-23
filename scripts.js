@@ -24,13 +24,19 @@ const searchWord = async (word) => {
 
 function displayWord(json) {
   let errorSection = document.querySelector("#error");
+  let playButton = document.querySelector("#play-button");
 
   if(json.title) {
     let title = document.querySelector("#error h3");
+    
     title.innerHTML = json.title;
     errorSection.classList.remove("hide");
+    errorSection.classList.add("error-flex");
+    playButton.classList.add("hide");
     return;
   } errorSection.classList.add("hide");
+    playButton.classList.remove("hide");
+    
 
   let phonetic = findPhonetics(json[0]);
   let phoneticDisplay = document.querySelector('#word-result h3');

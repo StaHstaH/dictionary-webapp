@@ -163,8 +163,28 @@ input:checked+.slider:before {
   border-radius: 50%;
 }
 
-#error {
+.error-flex {
+  display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
 
+.error-flex h3, .error-flex p {
+  font-family: 'Inter', sans-serif;
+}
+
+.error-flex h3 {
+  
+  font-size: 1.4rem;
+  font-weight: 700;
+  padding-bottom: 2rem;
+}
+
+.error-flex p {
+  font-size: 1.28rem;
+  color: var(--grey);
+  text-align: center;
 }
 
 .hide {
