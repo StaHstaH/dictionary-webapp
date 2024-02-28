@@ -4,11 +4,15 @@ const playback = document.querySelector("#word-definition img");
 input.addEventListener("keyup", () => {
   console.log(input.value + "dupa");
   let query = input.value.trim();
+  let wordDefinition = document.getElementById("word-definition");
+  let wordError = document.getElementById("error");
   if(query.length > 0) {
     searchWord(query);
     input.classList.remove("input-error");
   } else {
     input.classList.add("input-error");
+    wordDefinition.classList.add("hide");
+    wordError.classList.add("hide");
   }
 
 });
