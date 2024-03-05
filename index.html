@@ -1,63 +1,68 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@200..900&family=Inter:wght@400;700;800&family=Lora:ital,wght@0,400..700;1,400..700&display=swap"
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@200..900&family=Inter:wght@400;700;800&family=Lora:ital,wght@0,400..700;1,400..700&display=swap"
     rel="stylesheet">
   <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
   <link rel="stylesheet" href="styles.css" />
   <link rel="stylesheet" href="reset.css">
   <title>Frontend Mentor | Dictionary web app</title>
 </head>
+
 <body>
   <main>
     <header>
-    <img src="assets/images/logo.svg">
+      <img src="assets/images/logo.svg">
 
-    <section id="header-switchers">
-    <section id="font-switcher">
-    <select name="font-styles" id="font-styles">
-      <option value="sans-serif">Sans Serif</option>
-      <option value="serif">Serif</option>
-      <option value="monospace">Monospace</option>
-    </select>
-    </section>
-    <label class="switch">
-      <input type="checkbox">
-      <span class="slider round"></span>
-    </label>
+      <section id="header-switchers">
+        <section id="font-switcher">
+          <select name="font-styles" id="font-styles">
+            <option value="sans-serif">Sans Serif</option>
+            <option value="serif">Serif</option>
+            <option value="monospace">Monospace</option>
+          </select>
+        </section>
+        <label class="switch">
+          <input type="checkbox">
+          <span class="slider round"></span>
+        </label>
 
-    <img src="assets/images/icon-moon.svg">
-    </section>
+        <img src="assets/images/icon-moon.svg">
+      </section>
     </header>
 
     <section id="search-bar">
-      <input type="text" id="wordsearch" name="wordsearch" placeholder="Search for any word..."><img  src="assets/images/icon-search.svg"></input>
+      <input type="text" id="wordsearch" name="wordsearch" placeholder="Search for any word..."><img
+        src="assets/images/icon-search.svg"></input>
       <!-- <input type="submit" value="Submit"> -->
     </section>
 
     <section id="error" class="hide">
       <h1>🫤</h1>
       <h3></h3>
-      <p>Sorry pal, we couldn't find definitions for the word you were looking for. You can try the search again at later
+      <p>Sorry pal, we couldn't find definitions for the word you were looking for. You can try the search again at
+        later
         time or
         head to the web instead.</p>
     </section>
 
     <section class="hide" id="word-definition">
       <section id="word-result">
-      <section id="result">
-      <h1 id="word-search-result"></h1>
-      <h3></h3>
-      </section>
-      <img id="play-button" src="assets/images/icon-play.svg">
-      <audio id="pronunciation"></audio>
+        <section id="result">
+          <h1 id="word-search-result"></h1>
+          <h3></h3>
+        </section>
+        <img id="play-button" src="assets/images/icon-play.svg">
+        <audio id="pronunciation"></audio>
       </section>
 
-      
+
 
       <section id="meanings">
 
@@ -72,18 +77,24 @@
             <p class="example"></p>
           </li>
         </ul>
-        <section class="synonyms"><h4>Synonyms</h4>
-        <p></p>
+        <section class="synonyms">
+          <h4>Synonyms</h4>
+          <p></p>
         </section>
         <section class="antonyms">
-        <h4>Antonyms</h4>
-        <p></p>
+          <h4>Antonyms</h4>
+          <p></p>
+        </section>
       </section>
+      <section id="source" class="hide">
+        <p>Source<a target="_blank"></a><img src="assets/images/icon-new-window.svg"></p>
+        
       </section>
-      
-      </section>
+
+    </section>
   </main>
 
   <script src="scripts.js"></script>
 </body>
+
 </html>

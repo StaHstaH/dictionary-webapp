@@ -1,8 +1,9 @@
 const input = document.getElementById("wordsearch");
 const playback = document.querySelector("#word-definition img");
+const darkModeSelector = document.querySelector(".switch input");
 
 input.addEventListener("keyup", () => {
-  console.log(input.value + "dupa");
+  console.log(input.value + "input value");
   let query = input.value.trim();
   let wordDefinition = document.getElementById("word-definition");
   let wordError = document.getElementById("error");
@@ -20,6 +21,15 @@ input.addEventListener("keyup", () => {
 playback.addEventListener("click", () => {
   let phoneticPlayback = document.getElementById("pronunciation");
   phoneticPlayback.play();
+});
+
+darkModeSelector.addEventListener("change", () => {
+  var r = document.querySelector(':root');
+  if (darkModeSelector.checked) {
+    r.style.setProperty("--background", "var(--black)");
+  } else {
+    r.style.setProperty("--background", "var(--white)");
+  }
 });
 
 let currentAbortController = null;
@@ -89,6 +99,19 @@ function displayWord(json) {
 
   let result = document.getElementById("word-search-result");
   result.innerHTML = json[0].word;
+
+  let source = document.querySelector("#source p a");
+  let sourceUrl = json[0].sourceUrls[0];
+  let sourceContainer = document.getElementById("source");
+
+  if(sourceUrl) {
+    source.innerHTML = sourceUrl;
+    source.href = sourceUrl;
+    sourceContainer.classList.remove("hide");
+  } else {
+    sourceContainer.classList.add("hide");
+  }
+
 }
 
 function displayMeaning(meaning) {
@@ -168,3 +191,5 @@ function findPhonetics(json) {
   }
   return json.phonetic;
 }
+
+

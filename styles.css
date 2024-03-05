@@ -10,6 +10,11 @@
   --white: hsl(0, 0%, 100%);
   --violet: hsl(274, 82%, 60%);
   --redorange: hsl(0, 100%, 66%);
+  --background:var(--white);
+}
+
+html {
+  background-color: var(--background);
 }
 
 main {
@@ -135,7 +140,7 @@ h4 {
   width: 1rem;
   left: 0.2rem;
   bottom: 0.2rem;
-  background-color: white;
+  background-color: var(--white);
   -webkit-transition: .4s;
   transition: .4s;
 }
@@ -196,14 +201,15 @@ input:checked+.slider:before {
   display: flex;
   flex-direction: row;
   padding: 3rem 5rem;
-  max-width: 100%;
+  min-width: 100vw;
+  max-width: 53rem;
 }
 
 
 #wordsearch {
   border: none;
   border-radius: 0.5rem;
-  min-width: 53rem;
+  width: 100%;
   min-height: 4.5rem;
   background-color: var(--whitegrey);
   padding: 0.5rem 1.5rem;
